@@ -1,0 +1,39 @@
+<!-- Navigation -->
+<nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                <i class="fa fa-bars"></i>
+            </button>
+            <a class="navbar-brand page-scroll inline-block" href="/">
+              <span class="light">Lance com Rails</span>
+            </a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <% if current_user %>
+                <li>
+                   <%= 'Oi ' + current_user.email %>,
+                </li>
+                <li>
+                  <%= link_to "Editar", edit_user_registration_path %>
+                </li>
+                <li>
+                  <%= link_to "Sair", destroy_user_session_path, :method => :delete %>
+                </li>
+            <% else %>
+                <li>
+                  <%= link_to "Entrar", new_user_session_path %>
+                </li>
+                <li>
+                  <%= link_to "Cadastrar", new_user_registration_path %>
+                </li>
+            <% end %>
+          </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
