@@ -1,10 +1,45 @@
 <!-- footer -->
-<footer>
+<footer class="navbar navbar-custom navbar-fixed-bottom" role="navigation">
     <div class="container">
-        <div class="row">
-            <div class="col-lg-12 text-center">
-                <p>Copyleft &copy; Lance com Rails - 2015</p>
-            </div>
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                <i class="fa fa-bars"></i>
+            </button>
+            <a class="navbar-brand page-scroll inline-block" href="/">
+              <span class="light">Copyleft &copy; Lance com Rails - 2015</span>
+            </a>
         </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <% if current_user %>
+                <li>
+                   <%= 'User: ' + current_user.email %>,
+                </li>
+            <% else %>
+                <li>
+                  <%= link_to "Bower", new_user_registration_path %>
+                </li>
+                <li>
+                  <%= link_to "Bootstrap", new_user_registration_path %>
+                </li>
+                <li>
+                  <%= link_to "JQuery", new_user_registration_path %>
+                </li>
+                <li>
+                  <%= link_to "Devise", new_user_registration_path %>
+                </li>
+                <li>
+                  <%= link_to "SendGrid", new_user_registration_path %>
+                </li>
+                <li>
+                  <%= link_to "NameSpace", new_user_registration_path %>
+                </li>
+            <% end %>
+          </ul>
+        </div>
+        <!-- /.navbar-collapse -->
     </div>
+    <!-- /.container -->
 </footer>
