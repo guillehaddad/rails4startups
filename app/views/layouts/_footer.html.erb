@@ -1,45 +1,33 @@
 <!-- footer -->
 <footer class="navbar navbar-custom navbar-fixed-bottom" role="navigation">
     <div class="container">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
-                <i class="fa fa-bars"></i>
-            </button>
-            <a class="navbar-brand page-scroll inline-block" href="/">
-              <span class="light">Copyleft &copy; Lance com Rails - 2015</span>
-            </a>
+          <div class="row">
+              <div class="col-lg-6">
+                  <p>Copyleft &copy; Lance com Rails - 2015</p>
+              </div>
+              <div class="col-lg-6">
+                <ul class="list-inline">
+                    <li>
+                      <a href="#" target='_blank' class="btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a>
+                    </li>
+                    <li>
+                      <a href="#" target='_blank' class="btn-social btn-outline"><i class="fa fa-fw fa-wordpress"></i></a>
+                    </li>
+                    <li>
+                      <a href="#" target='_blank' class="btn-social btn-outline"><i class="fa fa-fw fa-google-plus"></i></a>
+                    </li>
+                    <li>
+                      <a href="#" target='_blank' class="btn-social btn-outline"><i class="fa fa-fw fa-twitter"></i></a>
+                    </li>
+                    <li>
+                      <a href="#" target='_blank' class="btn-social btn-outline"><i class="fa fa-fw fa-linkedin"></i></a>
+                    </li>
+                    <li>
+                      <a href="#" target='_blank' class="btn-social btn-outline"><i class="fa fa-fw fa-dribbble"></i></a>
+                    </li>
+                </ul>
+              </div>
         </div>
-
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
-          <ul class="nav navbar-nav navbar-right">
-            <% if current_user %>
-                <li>
-                   <%= 'User: ' + current_user.email %>,
-                </li>
-            <% else %>
-                <li>
-                  <%= link_to "Bower", new_user_registration_path %>
-                </li>
-                <li>
-                  <%= link_to "Bootstrap", new_user_registration_path %>
-                </li>
-                <li>
-                  <%= link_to "JQuery", new_user_registration_path %>
-                </li>
-                <li>
-                  <%= link_to "Devise", new_user_registration_path %>
-                </li>
-                <li>
-                  <%= link_to "SendGrid", new_user_registration_path %>
-                </li>
-                <li>
-                  <%= link_to "NameSpace", new_user_registration_path %>
-                </li>
-            <% end %>
-          </ul>
-        </div>
-        <!-- /.navbar-collapse -->
     </div>
     <!-- /.container -->
 </footer>
