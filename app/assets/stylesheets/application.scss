@@ -13,7 +13,6 @@
  *= require_tree .
  *= require_self
  *= require_bootstrap
- *= require_fontawesome
  */
  @import 'bootstrap/dist/css/bootstrap';
- @import "welcome";
+ @import 'welcome';
